@@ -20,10 +20,10 @@ package xades4j.utils;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.security.cert.X509CRL;
-import org.bouncycastle.asn1.ASN1Object;
-import org.bouncycastle.asn1.x509.CRLNumber;
-import org.bouncycastle.asn1.x509.X509Extension;
-import org.bouncycastle.x509.extension.X509ExtensionUtil;
+import org.spongycastle.asn1.ASN1Object;
+import org.spongycastle.asn1.x509.CRLNumber;
+import org.spongycastle.asn1.x509.X509Extension;
+import org.spongycastle.x509.extension.X509ExtensionUtil;
 
 /**
  *

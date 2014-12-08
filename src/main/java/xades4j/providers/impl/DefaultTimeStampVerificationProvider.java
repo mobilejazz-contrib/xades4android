@@ -29,19 +29,19 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
 import org.apache.xml.security.algorithms.MessageDigestAlgorithm;
-import org.bouncycastle.asn1.ASN1InputStream;
-import org.bouncycastle.asn1.ASN1ObjectIdentifier;
-import org.bouncycastle.asn1.cms.ContentInfo;
-import org.bouncycastle.cert.X509CertificateHolder;
-import org.bouncycastle.cert.jcajce.JcaX509CertificateConverter;
-import org.bouncycastle.cms.jcajce.JcaSimpleSignerInfoVerifierBuilder;
-import org.bouncycastle.cms.jcajce.JcaX509CertSelectorConverter;
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import org.bouncycastle.tsp.TSPAlgorithms;
-import org.bouncycastle.tsp.TSPException;
-import org.bouncycastle.tsp.TSPValidationException;
-import org.bouncycastle.tsp.TimeStampToken;
-import org.bouncycastle.util.Selector;
+import org.spongycastle.asn1.ASN1InputStream;
+import org.spongycastle.asn1.ASN1ObjectIdentifier;
+import org.spongycastle.asn1.cms.ContentInfo;
+import org.spongycastle.cert.X509CertificateHolder;
+import org.spongycastle.cert.jcajce.JcaX509CertificateConverter;
+import org.spongycastle.cms.jcajce.JcaSimpleSignerInfoVerifierBuilder;
+import org.spongycastle.cms.jcajce.JcaX509CertSelectorConverter;
+import org.spongycastle.jce.provider.BouncyCastleProvider;
+import org.spongycastle.tsp.TSPAlgorithms;
+import org.spongycastle.tsp.TSPException;
+import org.spongycastle.tsp.TSPValidationException;
+import org.spongycastle.tsp.TimeStampToken;
+import org.spongycastle.util.Selector;
 import xades4j.UnsupportedAlgorithmException;
 import xades4j.XAdES4jException;
 import xades4j.providers.CertificateValidationProvider;
@@ -159,7 +159,7 @@ public class DefaultTimeStampVerificationProvider implements TimeStampVerificati
             throw new TimeStampTokenVerificationException("Error when verifying the token signature", ex);
         }
 
-        org.bouncycastle.tsp.TimeStampTokenInfo tsTokenInfo = tsToken.getTimeStampInfo();
+        org.spongycastle.tsp.TimeStampTokenInfo tsTokenInfo = tsToken.getTimeStampInfo();
 
         try
         {
