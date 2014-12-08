@@ -2,14 +2,14 @@
 <ds:SignedInfo>
 <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
 <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
-<ds:Reference Id="xmldsig-d38603a1-f822-4dc9-aaa2-b6c0e8ea52e0-ref0" URI="file:/D:/Work/Projects/XAdES4j/xades4j/./src/test/xml/document.xml">
+<ds:Reference Id="xmldsig-d38603a1-f822-4dc9-aaa2-b6c0e8ea52e0-ref0" URI="file:document.xml">
 <ds:Transforms>
 <ds:Transform Algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116"><ds:XPath xmlns:foo="http://test.xades4j/tracks">/collection/album/foo:tracks</ds:XPath></ds:Transform>
 </ds:Transforms>
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
 <ds:DigestValue>rD/g8soqKz8EiPUBhEWfcQacS0ta4ULHX3dKMEH6ZoQ=</ds:DigestValue>
 </ds:Reference>
-<ds:Reference Id="xmldsig-d38603a1-f822-4dc9-aaa2-b6c0e8ea52e0-ref1" URI="file:/D:/Work/Projects/XAdES4j/xades4j/./src/test/xml/document.xml">
+<ds:Reference Id="xmldsig-d38603a1-f822-4dc9-aaa2-b6c0e8ea52e0-ref1" URI="file:document.xml">
 <ds:Transforms>
 <ds:Transform Algorithm="http://www.w3.org/2002/06/xmldsig-filter2"><dsig-xpath:XPath xmlns:bar="http://test.xades4j/tracks" xmlns:dsig-xpath="http://www.w3.org/2002/06/xmldsig-filter2" Filter="intersect">/collection/album/bar:tracks/bar:song[@tracknumber = 1]</dsig-xpath:XPath></ds:Transform>
 </ds:Transforms>
