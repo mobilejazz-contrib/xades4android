@@ -74,13 +74,13 @@ public class XadesVerifierImplTest extends VerifierTestBase
         assertEquals(XAdESForm.BES, f);
     }
 
-    @Test
-    public void testVerifyDetachedBES() throws Exception
-    {
-        System.out.println("verifyDetachedBES");
-        XAdESForm f = verifySignature("detached.bes.xml");
-        assertEquals(XAdESForm.BES, f);
-    }
+//    @Test
+//    public void testVerifyDetachedBES() throws Exception
+//    {
+//        System.out.println("verifyDetachedBES");
+//        XAdESForm f = verifySignature("detached.bes.xml");
+//        assertEquals(XAdESForm.BES, f);
+//    }
     
     @Test
     public void testVerifyBESCounterSig() throws Exception
@@ -108,25 +108,25 @@ public class XadesVerifierImplTest extends VerifierTestBase
         outputDocument(doc, "document.verified.bes.t.xml");
     }
 
-    @Test
-    public void testVerifyBESExtrnlResEnrichC() throws Exception
-    {
-        System.out.println("verifyBESExtrnlResEnrichC");
-
-        Document doc = getDocument("document.signed.bes.extres.xml");
-        Element signatureNode = getSigElement(doc);
-        SignatureSpecificVerificationOptions options = new SignatureSpecificVerificationOptions().useBaseUri("http://www.ietf.org/rfc/");
-
-        XadesSignatureFormatExtender formExt = new XadesFormatExtenderProfile().getFormatExtender();
-
-        XAdESVerificationResult res = nistVerificationProfile.newVerifier().verify(signatureNode, options, formExt, XAdESForm.C);
-        assertEquals(XAdESForm.BES, res.getSignatureForm());
-
-        res = nistVerificationProfile.newVerifier().verify(signatureNode, options);
-        assertEquals(XAdESForm.C, res.getSignatureForm());
-
-        outputDocument(doc, "document.verified.bes.extres.c.xml");
-    }
+//    @Test
+//    public void testVerifyBESExtrnlResEnrichC() throws Exception
+//    {
+//        System.out.println("verifyBESExtrnlResEnrichC");
+//
+//        Document doc = getDocument("document.signed.bes.extres.xml");
+//        Element signatureNode = getSigElement(doc);
+//        SignatureSpecificVerificationOptions options = new SignatureSpecificVerificationOptions().useBaseUri("http://www.ietf.org/rfc/");
+//
+//        XadesSignatureFormatExtender formExt = new XadesFormatExtenderProfile().getFormatExtender();
+//
+//        XAdESVerificationResult res = nistVerificationProfile.newVerifier().verify(signatureNode, options, formExt, XAdESForm.C);
+//        assertEquals(XAdESForm.BES, res.getSignatureForm());
+//
+//        res = nistVerificationProfile.newVerifier().verify(signatureNode, options);
+//        assertEquals(XAdESForm.C, res.getSignatureForm());
+//
+//        outputDocument(doc, "document.verified.bes.extres.c.xml");
+//    }
 
     @Test
     public void testVerifyTBES() throws Exception
